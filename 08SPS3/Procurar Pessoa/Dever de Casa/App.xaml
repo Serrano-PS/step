@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="Dever_de_Casa.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Dever_de_Casa"
+    RequestedTheme="Light">
+
+</Application>

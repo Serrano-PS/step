@@ -1,0 +1,5 @@
+﻿1>------ Build started: Project: 02-09, Configuration: Debug Win32 ------
+1>aula.cpp
+1>02-09.vcxproj -> C:\Users\Student\Desktop\Pedro\step c\Debug\02-09.exe
+1>02-09.vcxproj -> C:\Users\Student\Desktop\Pedro\step c\Debug\02-09.pdb (Partial PDB)
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

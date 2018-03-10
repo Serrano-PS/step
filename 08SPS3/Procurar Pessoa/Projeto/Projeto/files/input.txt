@@ -1,0 +1,10 @@
+00009
+25;19;Miguel Antonio;11924-021;4502.12
+3;32;José Guilherme;22221-014;3687.00
+4;40;Manuela Alves;68744-320;4978.57
+1;25;Carla Marins;21977-301;18674.68
+10;20;Pedro Serrano;22755-200;1200.87
+45;56;Maria Cristina;22755-200;12546.89
+85;54;Carlos Alberto;22755-200;12354.54
+74;85;Josefina de Jesus;22444-411;123.65
+21;25;Maria Creusa;21344-486;1235.87

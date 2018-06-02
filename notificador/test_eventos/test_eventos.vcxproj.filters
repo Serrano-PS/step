@@ -15,26 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="bus.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="evento.h">
+    <ClInclude Include="..\bus\eventos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="momento.h">
+    <ClInclude Include="..\bus\evento.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="eventos.h">
+    <ClInclude Include="..\bus\momento.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="evento.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="momento.cpp">
+    <ClCompile Include="..\bus\evento.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bus\momento.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

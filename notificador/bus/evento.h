@@ -1,66 +1,16 @@
 #ifndef _EVENTO_H_
-
 #define _EVENTO_H_
 
-#include<string>
-#include<ctime>
+#include <string>
+#include <ctime>
 #include <exception>
+
+#include <bus/momento.h>
 
 using namespace std;
 
 namespace notificador {
 	namespace bus {
-
-
-
-
-
-		struct momento {
-			momento(int p_hr, int p_min) {
-				if (p_hr > 23) {
-					throw runtime_error("hora maior que 23");
-				}
-				if (p_hr < 0) {
-					throw runtime_error("hora menor que 0");
-				}
-				if (p_min > 59) {
-					throw runtime_error("minuto maior que 59");
-				}
-				if (p_min < 0) {
-					throw runtime_error("minuti menor que 0");
-				}
-
-				m_hr = p_hr;
-				m_min = p_min;
-			}
-			momento(const momento & p_momento);
-			momento & operator=(const momento & p_momento);
-			bool operator==(const momento & p_momento) const;
-			bool operator==(time_t p_time) const {
-				struct tm * _tm = localtime(&p_time);
-				return (
-					(_tm->tm_hour == m_hr) &&
-					(_tm->tm_min == m_min)
-					);
-			}
-
-			bool operator < (const momento & p_momento) const {
-				if (m_hr > p_momento.m_hr) {
-					return true;
-				}
-
-				if ((m_hr == p_momento.m_hr) &&
-					(m_min > p_momento.m_min)) {
-					return true;
-				}
-				return false;
-			}
-
-		private:
-			int m_hr;
-			int m_min;
-		};
-
 		class evento
 		{
 		public:
@@ -72,7 +22,7 @@ namespace notificador {
 			// 
 			// evento e1 (s, 4500, -32);
 			//
-			evento(const std::string & p_desc, const momento & p_momento);
+			evento(const string & p_desc, const momento & p_momento);
 
 			// evento e1("remedio", 234567);
 			// evento e2(e1);
@@ -87,6 +37,11 @@ namespace notificador {
 				return (m_momento < p_evento.m_momento);
 			}
 
+			bool operator==(const evento & p_evento) const {
+				return (m_momento == p_evento.m_momento);
+			}
+
+			// 
 			bool eh_agora(time_t p_time) const {
 				return (m_momento == p_time);
 			}
@@ -130,4 +85,3 @@ namespace notificador {
 }
 
 #endif
-

@@ -18,15 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\bus\evento.cpp" />
-    <ClCompile Include="..\bus\momento.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\bus\evento.h" />
-    <ClInclude Include="..\bus\momento.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{8F30B12E-6BF1-4475-BD5E-74532D3750B5}</ProjectGuid>
@@ -88,6 +79,11 @@
       <AdditionalIncludeDirectories>$(SolutionDir)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)/lib/$(Platform)/$(Configuration)</AdditionalLibraryDirectories>
+      <OutputFile>$(SolutionDir)/$(Platform)/$(Configuration)/$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>ent.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -98,6 +94,11 @@
       <AdditionalIncludeDirectories>$(SolutionDir)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)/lib/$(Platform)/$(Configuration)</AdditionalLibraryDirectories>
+      <OutputFile>$(SolutionDir)/$(Platform)/$(Configuration)/$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>ent.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -113,6 +114,9 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)/lib/$(Platform)/$(Configuration)</AdditionalLibraryDirectories>
+      <OutputFile>$(SolutionDir)/$(Platform)/$(Configuration)/$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>ent.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -129,8 +133,17 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)/lib/$(Platform)/$(Configuration)</AdditionalLibraryDirectories>
+      <OutputFile>$(SolutionDir)/$(Platform)/$(Configuration)/$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>ent.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\canellas%40itstep.org\step\C++\notificador\bus\momento.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,16 +1,12 @@
 #include<iostream>
-#include "evento.h"
+#include <ent/evento.h>
+#include <ent/momento.h>
 
 using namespace std;
 
+using namespace notificador::ent;
+
 int main()
 {
-evento::evento a;
-  a.set_desc("Iai!!Mundo");
-  a.set_alarme(10,41,30);
-  string text = asctime(a.get_alarme());
-
-  cout<<a.get_desc()<<endl;
-  cout<<text<<endl;
-
+  evento e1("remédio fígado", momento(12,45));
 }

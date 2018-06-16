@@ -5,12 +5,12 @@
 #include <ctime>
 #include <exception>
 
-#include <bus/momento.h>
+#include <ent/momento.h>
 
 using namespace std;
 
 namespace notificador {
-	namespace bus {
+	namespace ent {
 		class evento
 		{
 		public:
@@ -85,3 +85,4 @@ namespace notificador {
 }
 
 #endif
+

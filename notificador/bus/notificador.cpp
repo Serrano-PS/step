@@ -1,4 +1,9 @@
-ï»¿#include <bus\notificador.h>
+
+#include <ent/momento.h>
+#include <ent/evento.h>
+#include <ent/eventos.h>
+
+#include <bus/notificador.h>
 
 void notificador::bus::notificador::start(i_exibidor * p_exibidor) {
 	std::stringstream _stream;
@@ -9,7 +14,7 @@ void notificador::bus::notificador::start(i_exibidor * p_exibidor) {
 		// converter para struct tm
 		struct tm * _tm = localtime(&_time);
 
-		// criar uma variï¿½vel 'momento'
+		// criar uma variável 'momento'
 		ent::momento _procurado(_tm->tm_hour, _tm->tm_min);
 
 		ent::eventos::const_iterator _end = m_eventos.end();
@@ -21,7 +26,7 @@ void notificador::bus::notificador::start(i_exibidor * p_exibidor) {
 				p_exibidor->exibe(*_ite);
 			}
 			else if (_procurado < _ite->get_alarme()) {
-				// nï¿½o vai mais achar
+				// não vai mais achar
 				break;
 			}
 		}

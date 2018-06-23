@@ -6,7 +6,14 @@ using namespace std;
 
 using namespace notificador::ent;
 
-int main()
-{
-  evento e1("remédio fígado", momento(12,45));
+evento test1() {
+
+  evento e1("remédio fígado ", momento(12,45));
+  return e1;
+
+
+}
+int main() {
+	evento evento = test1();
+	std::cout <<evento.get_desc() << evento.get_alarme().get_hr() << ":" << evento.get_alarme().get_mm() << std::endl;
 }

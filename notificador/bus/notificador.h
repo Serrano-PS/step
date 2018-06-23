@@ -1,4 +1,4 @@
-﻿#ifndef _NOTIFICADOR_
+#ifndef _NOTIFICADOR_
 #define _NOTIFICADOR_
 
 #include <iostream>
@@ -23,11 +23,9 @@ namespace notificador {
 		class notificador {
 		public:
 			inline notificador(const ent::eventos & p_eventos)
-				: m_eventos(p_eventos) {}
+			: m_eventos(p_eventos) {}
 
 			void start(i_exibidor * p_exibidor);
-				
-			
 
 		private:
 			const ent::eventos & m_eventos;
@@ -37,3 +35,4 @@ namespace notificador {
 
 
 #endif // !_NOTIFICADOR_
+
